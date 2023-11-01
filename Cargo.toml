@@ -1,0 +1,10 @@
+[package]
+name = "netfsck"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.4", features = ["derive"] }
+color-eyre = "0.6.2"
+console = "0.15.7"
+custom_error = "1.9.2"
