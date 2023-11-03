@@ -1,4 +1,4 @@
-# netfuck
+# netfsck
 
 my implementation of [netfuck](https://esolangs.org/wiki/NetFuck) with some changes to make it useful in something other than netfuck <-> netfuck communication \
 95% of the spec is from [here](https://github.com/animehunter/netfuck) \
