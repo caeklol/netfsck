@@ -18,6 +18,7 @@ fn reconstruct(instructions: Vec<parser::Instruction>) -> String {
             parser::OpCode::Disconnect => "!".to_string(),
             parser::OpCode::SocketHandle => "&".to_string(),
             parser::OpCode::FlushWrites => "%".to_string(),
+            parser::OpCode::SetTimeout => "$".to_string(),
             parser::OpCode::Loop => format!("[{}]", reconstruct(instruction.instructions)),
         });
     }

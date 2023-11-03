@@ -22,7 +22,8 @@ enum Token {
     SendData,
     RecieveData,
     SocketHandle,
-    FlushWrites
+    FlushWrites,
+    SetTimeout
 }
 
 impl Token {
@@ -43,6 +44,7 @@ impl Token {
             '!' => Some(Token::Disconnect),
             '&' => Some(Token::SocketHandle),
             '%' => Some(Token::FlushWrites),
+            '$' => Some(Token::SetTimeout),
             _ => None,
         }
     }
@@ -63,7 +65,8 @@ pub enum OpCode {
     RecieveData,
     Disconnect,
     SocketHandle,
-    FlushWrites
+    FlushWrites,
+    SetTimeout
 }
 
 #[derive(Debug)]
@@ -154,6 +157,7 @@ fn to_instructions(tokens: Vec<Token>) -> Result<Vec<Instruction>, ParseError> {
                     Token::Disconnect => OpCode::Disconnect,
                     Token::SocketHandle => OpCode::SocketHandle,
                     Token::FlushWrites => OpCode::FlushWrites,
+                    Token::SetTimeout => OpCode::SetTimeout,
                     Token::BeginLoop => panic!("What?"),
                     Token::EndLoop => panic!("What?"),
                 };
