@@ -15,7 +15,7 @@ very poorly written, may include implementation bugs
 | \~          | connect to the ip address of the current cell value. stores socket handle (handle>=0) into current cell                        |
 | \&          | use the current cell value as the socket handle for all networking operations                                                  |
 | \!          | close the current connection                                                                                                   |
-| \v          | recieve one byte from the current connection and store it at the current cell                                                  |
+| v           | recieve one byte from the current connection and store it at the current cell                                                  |
 | \^          | write one byte to an internal buffer                                                                                           |
 | \%          | flush the internal buffer and send it through the socket                                                                       |
 | \$          | set read/write timeout in ms. negative numbers remove timeout, causing the program to wait infinitely on read/write failure.   |
